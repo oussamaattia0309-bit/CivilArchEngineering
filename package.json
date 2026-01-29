@@ -1,0 +1,28 @@
+{
+  "name": "civilarch-engineering",
+  "version": "1.0.0",
+  "description": "A professional corporate website for CivilArch Engineering, focusing on civil engineering and construction services.",
+  "main": "src/App.tsx",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3",
+    "vite": "^2.5.0"
+  },
+  "keywords": [
+    "engineering",
+    "construction",
+    "civil engineering",
+    "website"
+  ],
+  "author": "CivilArch Engineering",
+  "license": "MIT"
+}
