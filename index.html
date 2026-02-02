@@ -614,51 +614,54 @@
         <p><i class="fas fa-envelope me-3" style="color: var(--accent);"></i> contact@civilarcheng.tn</p>
         <p><i class="fas fa-clock me-3" style="color: var(--accent);"></i> Monday–Friday: 8:00 – 17:30 / Saturday : 8:00 - 12:00</p>
       </div>
+
       <div class="col-lg-7">
-        <form>
+        <form id="contact-form">
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Full Name" required>
+            <input 
+              type="text" 
+              name="fi-sender-fullName" 
+              class="form-control" 
+              placeholder="Full Name" 
+              required
+            >
           </div>
           <div class="mb-3">
-            <input type="email" class="form-control" placeholder="Email Address" required>
+            <input 
+              type="email" 
+              name="fi-sender-email" 
+              class="form-control" 
+              placeholder="Email Address" 
+              required
+            >
           </div>
           <div class="mb-3">
-            <input type="tel" class="form-control" placeholder="Phone Number">
+            <input 
+              type="text" 
+              name="fi-text-phone" 
+              class="form-control" 
+              placeholder="Phone Number (any format, any length)" 
+            >
+            <!-- <small class="form-text text-muted mt-1">
+              msg for phone number formatting
+            </small> -->
           </div>
           <div class="mb-4">
-            <textarea class="form-control" rows="5" placeholder="Your Message / Project Description" required></textarea>
+            <textarea 
+              name="fi-text-message" 
+              class="form-control" 
+              rows="5" 
+              placeholder="Your Message / Project Description" 
+              required
+            ></textarea>
           </div>
           <button type="submit" class="btn btn-lg">Send Message</button>
         </form>
+
+        <p id="form-result" class="mt-3 fw-bold"></p>
       </div>
     </div>
   </div>
-
-  <!-- New: Special elements -->
-      <div class="item">
-        <div class="card project-card h-100 shadow overflow-hidden rounded-4">
-          <div class="position-relative">
-            <img 
-              src="Images/Speciaux.png" 
-              class="card-img-top services-img semi-transparent" 
-              alt="Special elements"
-            >
-            <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
-              <a href="#" class="btn btn-warning btn-md stretched-link">Learn More</a>
-            </div>
-          </div>
-          <div class="card-body text-center p-4 p-lg-5">
-            <h5 class="card-title fw-bold mb-3">Special elements</h5>
-            <span class="badge bg-warning text-dark mb-3">Custom Design</span>
-            <p class="card-text fs-5 lh-lg">
-              SolidWorks studies of support bracket, brick mashrabiya, etc.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </section>
 
 <footer>
@@ -741,6 +744,42 @@
 
   // Start observing the about section
   observer.observe(document.querySelector('#about'));
+</script>
+<!-- Forminit SDK -->
+<script src="https://forminit.com/sdk/v1/forminit.js"></script>
+<script>
+  const forminit = new Forminit();
+  const FORM_ID = 'lhoe0oklte6';
+
+  const form = document.getElementById('contact-form');
+  const result = document.getElementById('form-result');
+
+  form.addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    result.textContent = 'Sending...';
+    result.className = 'mt-3 fw-bold text-muted';
+
+    const formData = new FormData(form);
+
+    try {
+      const { data, error } = await forminit.submit(FORM_ID, formData);
+
+      if (error) {
+        result.textContent = error.message || 'Error sending message. Try again.';
+        result.className = 'mt-3 fw-bold text-danger';
+        return;
+      }
+
+      result.textContent = 'Message sent successfully! Thank you.';
+      result.className = 'mt-3 fw-bold text-success';
+      form.reset();
+
+    } catch (err) {
+      result.textContent = 'Network error. Please check connection.';
+      result.className = 'mt-3 fw-bold text-danger';
+    }
+  });
 </script>
 </body>
 

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CivilArchEngineering – Construction & Engineering Excellence</title>
+  <meta name="description" content="CivilArchEngineering - Experts in civil engineering, architectural design, structural projects and construction services in Tunisia and beyond.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+  :root {
+    --primary:        #1E3A5F;
+    --primary-mid:    #2C5282;
+    --accent-glow:    #4DA8DA;
+    --accent:         #FF6600;
+    --dark-text:      #0A1F35;
+    --light-bg:       #E8EEF4;
+    --white:          #FFFFFF;
+  }
+
+#hero {
+  min-height: 85vh;
+  background: var(--dark-text) url('images/fallback-construction.png') center/cover no-repeat;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 110px;
+}
+
+#hero video,
+#hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-text);
+    background-color: #fff;
+    scroll-padding-top: 150px;
+  }
+
+  /* Header & Navbar */
+  header {
+    background: var(--primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .navbar {
+    padding: 1rem 0;
+    min-height: 110px;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .navbar-brand img {
+    height: 150px;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+    filter: 
+      drop-shadow(0 0 14px #ffffff)
+      drop-shadow(0 0 9px #ffffff)
+      drop-shadow(0 0 5px #ffffff)
+      drop-shadow(0 0 2px #ffffff);
+  }
+
+  .nav-link {
+    color: var(--white) !important;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--accent) !important;
+  }
+
+  .dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .dropdown-item:hover {
+    background-color: var(--light-bg);
+    color: var(--accent);
+  }
+
+  /* Hero */
+  #hero {
+    min-height: 85vh;
+    background: var(--dark-text);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 110px;
+  }
+
+  .hero-logo {
+    max-width: 550px;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
+    filter: 
+      drop-shadow(0 0 14px #ffffff)
+      drop-shadow(0 0 9px #ffffff)
+      drop-shadow(0 0 5px #ffffff)
+      drop-shadow(0 0 2px #ffffff);
+  }
+
+  #hero .lead {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    opacity: 0.95;
+  }
+
+  .btn-lg {
+    transition: all 0.3s;
+  }
+
+  .btn-lg:hover {
+    transform: scale(1.05);
+  }
+
+  /* General sections */
+  .section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: var(--accent);
+    margin: 15px auto;
+    border-radius: 3px;
+  }
+
+  #about, #projects, #services, #contact {
+    padding: 100px 0;
+  }
+
+  #projects, #contact {
+    background: var(--light-bg);
+  }
+
+  #services {
+    background: white;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
+  }
+
+  /* Cards (shared for projects & services) */
+  .project-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    transition: all 0.4s ease;
+    background: white;
+  }
+
+  .project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+  }
+
+.project-img,
+.services-img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Specific heights – adjust these values only if needed */
+.project-img {
+  height: 300px;           /* Featured Projects – balanced height */
+}
+
+.services-img {
+  height: 280px;           /* Our Services – slightly smaller or same as projects */
+}
+
+/* Hover zoom (already smooth) */
+.project-card:hover .project-img,
+.project-card:hover .services-img {
+  transform: scale(1.08);
+}
+
+  .project-card:hover .project-img,
+  .project-card:hover .services-img {
+    transform: scale(1.1);
+  }
+
+  .project-overlay {
+    background: rgba(30, 58, 95, 0.75);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  .project-card .badge {
+    font-size: 0.95rem;
+    padding: 0.6em 1.2em;
+  }
+
+  .card-body {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .card-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  /* Services-specific */
+
+
+
+
+  #services .card-body {
+    padding: 1.5rem 1.25rem 2.5rem;
+  }
+
+  #services .card {
+    min-height: 520px;
+  }
+
+  /* Buttons */
+  .btn-warning,
+  .btn-warning:hover,
+  .btn-warning:focus,
+  .btn-warning:active {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: var(--white) !important;
+  }
+
+  /* Contact & Footer */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  footer a {
+    color: var(--accent-glow);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: var(--accent);
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-logo {
+      max-width: 380px;
+    }
+    .navbar {
+      min-height: 90px;
+      padding: 0.8rem 0;
+    }
+    .navbar-brand img {
+      height: 90px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-logo {
+      max-width: 300px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header class="fixed-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">
+        <img src="../Images/Logo CAE.png" alt="CivilArchEngineering Logo" class="img-fluid">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#hero">Home</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#projects-title">Projects</a> <!-- Direct link to section title -->
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services / Sectors
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#services">Architectural Design</a></li>
+              <li><a class="dropdown-item" href="#">Structural Engineering</a></li>
+              <li><a class="dropdown-item" href="#">General Contracting</a></li>
+              <li><a class="dropdown-item" href="#">BIM Modeling</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="pt-5 mt-5">
+  <div class="container py-5">
+    <!-- Page title – same style as your other section titles -->
+    <h1 class="section-title mb-5 text-center">Page Title Here</h1>
+
+    <!-- Main content area – centered and wide enough -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-8">
+
+        <!-- Lead paragraph (optional – keep or remove) -->
+        <p class="lead text-center mb-5">
+          This is your new page's main content area.
+          Replace this text with whatever you want: descriptions, images, cards, galleries, etc.
+        </p>
+
+        <!-- Example content block – you can copy-paste or delete -->
+        <div class="card shadow overflow-hidden rounded-4 mb-5">
+          <div class="card-body p-5 text-center">
+            <h3 class="fw-bold mb-4">Example Content Block</h3>
+            <p class="fs-5 text-muted">
+              The fixed header stays at the top while scrolling.
+              Your contact section is still at the bottom.
+              Feel free to paste projects cards, services, text, images, or anything else here.
+            </p>
+          </div>
+        </div>
+
+        <!-- Add more rows/sections/cards as needed -->
+        <!-- Example: another section -->
+        <div class="text-center mb-5">
+          <h4 class="fw-bold mb-4">Another Section Title</h4>
+          <p>
+            You can keep adding content here — the layout will stay clean and centered.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <h3>Get in Touch</h3>
+        <p class="mt-4"><i class="fas fa-map-marker-alt me-3" style="color: var(--accent);"></i> 4 Avenue de La Liberté, Tunis , Tunisie </p>
+        <p><i class="fas fa-phone me-3" style="color: var(--accent);"></i> +216 22 488 665</p>
+        <!-- <p><i class="fas fa-envelope me-3" style="color: var(--accent);"></i> contact@civilarcheng.tn</p> -->
+        <p><i class="fas fa-clock me-3" style="color: var(--accent);"></i> Monday–Friday: 8:00 – 17:30 / Saturday : 8:00 - 12:00</p>
+      </div>
+     <div class="col-lg-7">
+  <form id="contact-form" action="https://forminit.com/f/lhoe0oklte6" method="POST">
+    <div class="mb-3">
+      <input 
+        type="text" 
+        name="fi-sender-fullName" 
+        class="form-control" 
+        placeholder="Full Name" 
+        required
+      >
+    </div>
+    <div class="mb-3">
+      <input 
+        type="email" 
+        name="fi-sender-email" 
+        class="form-control" 
+        placeholder="Email Address" 
+        required
+      >
+    </div>
+    <div class="mb-3">
+      <input 
+        type="tel" 
+        name="fi-sender-phone" 
+        class="form-control" 
+        placeholder="Phone Number" 
+        pattern="[+\s0-9]*" 
+        title="Only digits, spaces and optional + allowed"
+      >
+      <small class="form-text text-muted mt-1">
+        
+      </small>
+    </div>
+    <div class="mb-4">
+      <textarea 
+        name="fi-text-message" 
+        class="form-control" 
+        rows="5" 
+        placeholder="Your Message / Project Description" 
+        required
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-lg">Send Message</button>
+  </form>
+
+  <p id="form-result" class="mt-3 fw-bold"></p>
+</div>
+    </div>
+  </div>
+
+  <!-- New: Special elements -->
+      <div class="item">
+       
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="container py-4">
+    <p class="mb-2 fs-4 fw-bold">CivilArchEngineering</p>
+    <div class="d-flex justify-content-center gap-4 mb-3">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="mb-0">© 2025 CivilArchEngineering. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function(){
+    $("#servicesCarousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 2 },
+        1000: { items: 3 }
+      }
+    });
+  });
+</script>
+<!-- Counter animation script -->
+<!-- Counter animation script – restarts every time section is scrolled into view -->
+<script>
+  const counters = document.querySelectorAll('.counter');
+
+  // Function to animate a single counter
+  function animateCounter(counter) {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const increment = target / 100; // adjust for speed/smoothness
+
+    const updateCount = () => {
+      if (count < target) {
+        count += increment;
+        counter.innerText = Math.ceil(count) + '+';
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = target + '+';
+      }
+    };
+
+    updateCount();
+  }
+
+  // Observer options
+  const options = {
+    threshold: 0.5 // trigger when 50% of section is visible
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Animate all counters when section enters view
+        counters.forEach(counter => {
+          counter.innerText = '0+'; // reset to 0
+          animateCounter(counter);
+        });
+      }
+    });
+  }, options);
+
+  // Start observing the about section
+  observer.observe(document.querySelector('#about'));
+</script>
+
+<!-- Forminit SDK -->
+<script src="https://forminit.com/sdk/v1/forminit.js"></script>
+<script>
+  const forminit = new Forminit();
+  const FORM_ID = 'lhoe0oklte6';
+
+  const form = document.getElementById('contact-form');
+  const result = document.getElementById('form-result');
+
+  // Real-time cleaning: remove anything that's not digit, + or space
+  form.querySelector('input[name="fi-sender-phone"]').addEventListener('input', function(e) {
+    this.value = this.value.replace(/[^0-9+\s]/g, '');
+  });
+
+  form.addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    result.textContent = 'Sending...';
+    result.className = 'mt-3 fw-bold text-muted';
+
+    const formData = new FormData(form);
+
+    try {
+      const { data, error } = await forminit.submit(FORM_ID, formData);
+
+      if (error) {
+        result.textContent = error.message || 'Error sending message. Please try again.';
+        result.className = 'mt-3 fw-bold text-danger';
+        return;
+      }
+
+      result.textContent = 'Message sent successfully! Thank you.';
+      result.className = 'mt-3 fw-bold text-success';
+      form.reset();
+
+    } catch (err) {
+      result.textContent = 'Network error. Please check connection and try again.';
+      result.className = 'mt-3 fw-bold text-danger';
+    }
+  });
+</script>
+<script>
+// Extra client-side phone validation (blocks letters & unwanted chars)
+document.querySelector('input[name="fi-sender-phone"]').addEventListener('input', function(e) {
+  this.value = this.value.replace(/[^0-9+\s]/g, ''); // remove anything that's not digit, +, or space
+});
+</script>
+</body>
+</html>
