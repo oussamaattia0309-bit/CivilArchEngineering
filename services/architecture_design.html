@@ -332,77 +332,216 @@
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#hero">Home</a>
-          </li>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#hero">Home</a>  <!-- removed active -->
+    </li>
 
-          <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        About Us
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#about">Company Profile</a></li>
+        <li><a class="dropdown-item" href="#">History</a></li>
+        <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
+      </ul>
+    </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#projects-title">Projects</a> <!-- Direct link to section title -->
-          </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#projects-title">Projects</a>
+    </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Services / Sectors
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#services">Architectural Design</a></li>
-              <li><a class="dropdown-item" href="#">Structural Engineering</a></li>
-              <li><a class="dropdown-item" href="#">General Contracting</a></li>
-              <li><a class="dropdown-item" href="#">BIM Modeling</a></li>
-            </ul>
-          </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Services / Sectors
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#services">Architectural Design</a></li>
+        <li><a class="dropdown-item" href="#">Structural Engineering</a></li>
+        <li><a class="dropdown-item" href="#">General Contracting</a></li>
+        <li><a class="dropdown-item" href="#">BIM Modeling</a></li>
+      </ul>
+    </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+    <li class="nav-item">
+      <a class="nav-link" href="#contact">Contact</a>
+    </li>
+  </ul>
+</div>
     </nav>
   </div>
 </header>
 <main class="pt-5 mt-5">
   <div class="container py-5">
-    <!-- Page title – same style as your other section titles -->
-    <h1 class="section-title mb-5 text-center">Page Title Here</h1>
 
-    <!-- Main content area – centered and wide enough -->
-    <div class="row justify-content-center">
-      <div class="col-lg-10 col-xl-8">
+    <!-- Hero / Intro section -->
+    <div class="text-center mb-5 pb-5 border-bottom">
+      <h1 class="section-title mb-4">Architectural Design</h1>
+      <p class="lead text-muted mb-4" style="max-width: 800px; margin: 0 auto;">
+        Creating timeless, functional, and inspiring spaces through innovative design, attention to detail, and client-centered approach. 
+        From concept sketches to final execution, we turn visions into reality.
+      </p>
+      <a href="#contact" class="btn btn-warning btn-lg">
+        Start Your Project <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
 
-        <!-- Lead paragraph (optional – keep or remove) -->
-        <p class="lead text-center mb-5">
-          This is your new page's main content area.
-          Replace this text with whatever you want: descriptions, images, cards, galleries, etc.
-        </p>
+    <!-- Our Approach / Services highlights -->
+    <div class="row g-5 mb-5">
+      <div class="col-lg-6">
+        <h3 class="fw-bold mb-4">What We Deliver</h3>
+        <ul class="list-unstyled fs-5 text-muted">
+          <li class="mb-3"><i class="fas fa-check-circle text-warning me-3"></i>Conceptual & detailed architectural design</li>
+          <li class="mb-3"><i class="fas fa-check-circle text-warning me-3"></i>3D visualizations & photorealistic renderings</li>
+          <li class="mb-3"><i class="fas fa-check-circle text-warning me-3"></i>Interior & exterior design solutions</li>
+          <li class="mb-3"><i class="fas fa-check-circle text-warning me-3"></i>BIM-integrated plans & documentation</li>
+          <li class="mb-3"><i class="fas fa-check-circle text-warning me-3"></i>Site analysis & feasibility studies</li>
+          <li><i class="fas fa-check-circle text-warning me-3"></i>Renovation & adaptive reuse projects</li>
+        </ul>
+      </div>
 
-        <!-- Example content block – you can copy-paste or delete -->
-        <div class="card shadow overflow-hidden rounded-4 mb-5">
-          <div class="card-body p-5 text-center">
-            <h3 class="fw-bold mb-4">Example Content Block</h3>
-            <p class="fs-5 text-muted">
-              The fixed header stays at the top while scrolling.
-              Your contact section is still at the bottom.
-              Feel free to paste projects cards, services, text, images, or anything else here.
-            </p>
-          </div>
-        </div>
+      <div class="col-lg-6">
+        <img 
+          src="../Images/photo plan mall.png" 
+          alt="Architectural Design Example" 
+          class="img-fluid rounded-4 shadow"
+        >
 
-        <!-- Add more rows/sections/cards as needed -->
-        <!-- Example: another section -->
-        <div class="text-center mb-5">
-          <h4 class="fw-bold mb-4">Another Section Title</h4>
-          <p>
-            You can keep adding content here — the layout will stay clean and centered.
-          </p>
-        </div>
-
+        
       </div>
     </div>
+
+    <!-- Featured Projects – grid of cards -->
+    <!-- <h3 class="section-title text-center mb-5">Featured Architectural Projects</h3> -->
+    <!-- Showcase of 6 images – 2 per row, 3 rows -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <!-- Title Section -->
+    <div class="text-center mb-5">
+      <h2 class="section-title">Ils nous ont fait confiance</h2>
+      
+    </div>
+
+ <!-- Showcase of 6 images – 2 per row, 3 rows -->
+<div class="row g-4 mb-5">
+  <!-- Row 1 -->
+  <div class="col-md-6">
+    <div class="shadow rounded-4 overflow-hidden text-center mb-4">
+      <img 
+        loading="lazy" 
+        decoding="async" 
+        src="../Images/architecture_design1.jpg" 
+        alt="Projet Architectural 1" 
+        class="img-fluid w-100"
+        style="height: 400px; object-fit: cover;"
+      >
+      <div class="p-4">
+        <h5 class="fw-bold mb-2">Résidence Moderne</h5>
+        <p class="text-muted small mb-0">Design épuré avec vue panoramique et matériaux durables</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="shadow rounded-4 overflow-hidden text-center mb-4">
+      <img 
+        loading="lazy" 
+        decoding="async" 
+        src="../Images/architecture_design2.png" 
+        alt="Projet Architectural 2" 
+        class="img-fluid w-100"
+        style="height: 400px; object-fit: cover;"
+      >
+      <div class="p-4">
+        <h5 class="fw-bold mb-2">Villa Côtière</h5>
+        <p class="text-muted small mb-0">Intégration harmonieuse avec le paysage marin</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="col-md-6">
+    <div class="shadow rounded-4 overflow-hidden text-center mb-4">
+      <img 
+        loading="lazy" 
+        decoding="async" 
+        src="../Images/architecture_design3.jpg" 
+        alt="Projet Architectural 3" 
+        class="img-fluid w-100"
+        style="height: 400px; object-fit: cover;"
+      >
+      <div class="p-4">
+        <h5 class="fw-bold mb-2">Bâtiment Mixte</h5>
+        <p class="text-muted small mb-0">Espaces résidentiels et commerciaux combinés</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="shadow rounded-4 overflow-hidden text-center mb-4">
+      <img 
+        loading="lazy" 
+        decoding="async" 
+        src="../Images/architecture_design4.jpg" 
+        alt="Projet Architectural 4" 
+        class="img-fluid w-100"
+        style="height: 400px; object-fit: cover;"
+      >
+      <div class="p-4">
+        <h5 class="fw-bold mb-2">Rénovation Urbaine</h5>
+        <p class="text-muted small mb-0">Transformation d'un bâtiment historique en espace moderne</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="col-md-6">
+    <div class="shadow rounded-4 overflow-hidden text-center mb-4">
+      <img 
+        loading="lazy" 
+        decoding="async" 
+        src="../Images/architecture_design5.png" 
+        alt="Projet Architectural 5" 
+        class="img-fluid w-100"
+        style="height: 400px; object-fit: cover;"
+      >
+      <div class="p-4">
+        <h5 class="fw-bold mb-2">Espace Collectif</h5>
+        <p class="text-muted small mb-0">Conception communautaire avec zones partagées</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="shadow rounded-4 overflow-hidden text-center mb-4">
+      <img 
+        loading="lazy" 
+        decoding="async" 
+        src="../Images/architecture_design6.png" 
+        alt="Projet Architectural 6" 
+        class="img-fluid w-100"
+        style="height: 400px; object-fit: cover;"
+      >
+      <div class="p-4">
+        <h5 class="fw-bold mb-2">Maison Éco-Responsable</h5>
+        <p class="text-muted small mb-0">Matériaux durables et optimisation énergétique</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+    <!-- Call to Action -->
+    <div class="text-center py-5 bg-light rounded-4">
+      <h3 class="fw-bold mb-4">Ready to Start Your Project?</h3>
+      <p class="lead mb-4">Let's bring your architectural vision to life.</p>
+      <a href="#contact" class="btn btn-warning btn-lg">
+        Get in Touch <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+
   </div>
 </main>
 
