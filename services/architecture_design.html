@@ -57,53 +57,54 @@
 
   /* Header & Navbar */
   header {
-    background: var(--primary);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  }
+      background: var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
 
-  .navbar {
-    padding: 1rem 0;
-    min-height: 110px;
-  }
+    .navbar {
+      padding: 0.0rem 0;
+      min-height: 100px;
+    }
 
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    padding: 0;
-  }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
 
-  .navbar-brand img {
-    height: 150px;
-    width: auto;
-    max-height: 100%;
-    object-fit: contain;
-    filter: 
-      drop-shadow(0 0 14px #ffffff)
-      drop-shadow(0 0 9px #ffffff)
-      drop-shadow(0 0 5px #ffffff)
-      drop-shadow(0 0 2px #ffffff);
-  }
+    .navbar-brand img {
+      height: 150px;
+      width: auto;
+      max-height: 100%;
+      object-fit: contain;
+      filter: 
+        drop-shadow(0 0 14px #ffffff)
+        drop-shadow(0 0 9px #ffffff)
+        drop-shadow(0 0 5px #ffffff)
+        drop-shadow(0 0 2px #ffffff);
+    }
 
-  .nav-link {
-    color: var(--white) !important;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
+    .nav-link {
+      color: var(--white) !important;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-  .nav-link:hover,
-  .nav-link.active {
-    color: var(--accent) !important;
-  }
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent) !important;
+    }
 
-  .dropdown-menu {
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
+    .dropdown-menu {
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
 
-  .dropdown-item:hover {
-    background-color: var(--light-bg);
-    color: var(--accent);
-  }
+    .dropdown-item:hover {
+      background-color: var(--light-bg);
+      color: var(--accent);
+    }
+
 
   /* Hero */
   #hero {
@@ -323,8 +324,8 @@
 <header class="fixed-top">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="#">
-        <img src="../Images/Logo CAE.png" alt="CivilArchEngineering Logo" class="img-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/Logo CAE.png" alt="CivilArchEngineering Logo" class="img-fluid">
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -332,43 +333,43 @@
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#hero">Home</a>  <!-- removed active -->
-    </li>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
 
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        About Us
-      </a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#about">Company Profile</a></li>
-        <li><a class="dropdown-item" href="#">History</a></li>
-        <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
-      </ul>
-    </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../index.html#about">Company Profile</a></li>
+              <li><a class="dropdown-item" href="#">History</a></li>
+              <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
+            </ul>
+          </li>
 
-    <li class="nav-item">
-      <a class="nav-link" href="#projects-title">Projects</a>
-    </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#projects-title">Projects</a>
+          </li>
 
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Services / Sectors
-      </a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#services">Architectural Design</a></li>
-        <li><a class="dropdown-item" href="#">Structural Engineering</a></li>
-        <li><a class="dropdown-item" href="#">General Contracting</a></li>
-        <li><a class="dropdown-item" href="#">BIM Modeling</a></li>
-      </ul>
-    </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services / Sectors
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../services/architectural-design.html">Architectural Design</a></li>
+              <li><a class="dropdown-item active" href="#">Structural Engineering</a></li>
+              <li><a class="dropdown-item" href="#">General Contracting</a></li>
+              <li><a class="dropdown-item" href="#">BIM Modeling</a></li>
+            </ul>
+          </li>
 
-    <li class="nav-item">
-      <a class="nav-link" href="#contact">Contact</a>
-    </li>
-  </ul>
-</div>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </div>
 </header>
@@ -598,7 +599,9 @@
         required
       ></textarea>
     </div>
-    <button type="submit" class="btn btn-lg">Send Message</button>
+    <button type="submit" class="btn btn-warning btn-lg">
+  Send Message
+</button>
   </form>
 
   <p id="form-result" class="mt-3 fw-bold"></p>
