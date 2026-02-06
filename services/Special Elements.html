@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CivilArchEngineering – Special Elements</title>
+  <meta name="description" content="Custom structural and architectural elements: support brackets, mashrabiya, parametric designs, and bespoke solutions in Tunisia and beyond.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Paste your full CSS here (exactly the same as other pages) -->
+  <style>
+    :root {
+      --primary:        #1E3A5F;
+      --primary-mid:    #2C5282;
+      --accent-glow:    #4DA8DA;
+      --accent:         #FF6600;
+      --dark-text:      #0A1F35;
+      --light-bg:       #E8EEF4;
+      --white:          #FFFFFF;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--dark-text);
+      background-color: #fff;
+      scroll-padding-top: 150px;
+    }
+
+    header {
+      background: var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .navbar {
+      padding: 0.0rem 0;
+      min-height: 100px;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    .navbar-brand img {
+      height: 150px;
+      width: auto;
+      max-height: 100%;
+      object-fit: contain;
+      filter: 
+        drop-shadow(0 0 14px #ffffff)
+        drop-shadow(0 0 9px #ffffff)
+        drop-shadow(0 0 5px #ffffff)
+        drop-shadow(0 0 2px #ffffff);
+    }
+
+    .nav-link {
+      color: var(--white) !important;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent) !important;
+    }
+
+    .dropdown-menu {
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .dropdown-item:hover {
+      background-color: var(--light-bg);
+      color: var(--accent);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 5px;
+      background: var(--accent);
+      margin: 15px auto;
+      border-radius: 3px;
+    }
+
+    #about, #projects, #services, #contact {
+      padding: 100px 0;
+    }
+
+    #projects, #contact {
+      background: var(--light-bg);
+    }
+
+    #services {
+      background: white;
+      margin-top: 4rem;
+      margin-bottom: 0rem;
+    }
+
+    .project-card {
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      transition: all 0.4s ease;
+      background: white;
+    }
+
+    .project-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    }
+
+    .project-img,
+    .services-img {
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-img {
+      height: 300px;
+    }
+
+    .services-img {
+      height: 280px;
+    }
+
+    .project-card:hover .project-img,
+    .project-card:hover .services-img {
+      transform: scale(1.1);
+    }
+
+    .project-overlay {
+      background: rgba(30, 58, 95, 0.75);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .project-card:hover .project-overlay {
+      opacity: 1;
+    }
+
+    .project-card .badge {
+      font-size: 0.95rem;
+      padding: 0.6em 1.2em;
+    }
+
+    .card-body {
+      padding: 1.5rem 1.25rem;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    #services .card-body {
+      padding: 1.5rem 1.25rem 2.5rem;
+    }
+
+    #services .card {
+      min-height: 520px;
+    }
+
+    .btn-warning,
+    .btn-warning:hover,
+    .btn-warning:focus,
+    .btn-warning:active {
+      background-color: var(--accent) !important;
+      border-color: var(--accent) !important;
+      color: var(--white) !important;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    footer {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 3rem 0;
+    }
+
+    footer a {
+      color: var(--accent-glow);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .navbar {
+        min-height: 90px;
+        padding: 0.8rem 0;
+      }
+      .navbar-brand img {
+        height: 90px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-logo {
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="fixed-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../Images/Logo CAE.png" alt="CivilArchEngineering Logo" class="img-fluid">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#projects-title">Projects</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services / Sectors
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../services/architecture_design.html">Architectural Design</a></li>
+              <li><a class="dropdown-item" href="../services/structural-engineering.html">Structural Engineering</a></li>
+              <li><a class="dropdown-item" href="../services/General Contracting.html">General Contracting</a></li>
+              <li><a class="dropdown-item active" href="../services/special-elements.html">Special Elements</a></li>
+              <li><a class="dropdown-item" href="../services/BIM Modeling.html">BIM Modeling</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="pt-5 mt-5">
+  <div class="container py-5">
+
+    <!-- Hero / Intro section -->
+    <div class="text-center mb-5 pb-5 border-bottom">
+      <h1 class="section-title mb-4">Special Elements</h1>
+      <p class="lead text-muted mb-4" style="max-width: 800px; margin: 0 auto;">
+        We design and engineer custom structural and architectural components that go beyond standard solutions. 
+        From load-bearing brackets to parametric mashrabiya screens, bespoke connections, and unique façade elements — we bring precision and creativity to every detail.
+      </p>
+      <a href="#contact" class="btn btn-warning btn-lg">
+        Start Your Custom Project <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+
+    <!-- What We Deliver -->
+    <div class="row g-5 mb-5">
+      <div class="col-lg-6">
+        <h3 class="fw-bold mb-4">What We Deliver</h3>
+        <ul class="list-unstyled fs-5 text-muted">
+          <li class="mb-3"><i class="fas fa-check-circle text-warning me-3"></i>Custom steel & concrete support brackets</li>
+          <li class="mb-3"><i class="fas fa-check-circle text-warning me-3"></i>Parametric mashrabiya & shading screens</li>
+          <li class="mb-3"><i class="fas fa-check-circle text-warning me-3"></i>Bespoke façade elements & decorative components</li>
+          <li class="mb-3"><i class="fas fa-check-circle text-warning me-3"></i>Special load-bearing connections & joints</li>
+          <li class="mb-3"><i class="fas fa-check-circle text-warning me-3"></i>SolidWorks modeling & structural validation</li>
+          <li><i class="fas fa-check-circle text-warning me-3"></i>Fabrication drawings & shop detailing</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-6">
+        <img 
+          src="../Images/Speciaux.png" 
+          alt="Special Elements Example" 
+          class="img-fluid rounded-4 shadow"
+        >
+      </div>
+    </div>
+
+    <!-- Showcase of 6 images – 2 per row, 3 rows -->
+    <h3 class="section-title text-center mb-5">Featured Special Elements</h3>
+    
+    <section class="py-5 bg-light">
+  <div class="container">
+
+    <!-- Block 1: Text left, Image right -->
+    <div class="row align-items-center g-5 mb-5">
+      <div class="col-lg-6">
+        <h4 class="fw-bold mb-3">Custom Steel Brackets</h4>
+        <p class="text-muted">
+          BRICK mechanical support system for load transfer of masonry cladding in façade. 
+        Designed for any building type, new construction or renovation.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <div class="shadow rounded-4 overflow-hidden">
+          <img 
+            src="../Images/Special Elements/console.png" 
+            alt="Custom Steel Bracket" 
+            class="img-fluid w-100"
+            style="aspect-ratio: 2 / 1; object-fit: cover;"
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 2: Image left, Text right -->
+    <div class="row align-items-center g-5 mb-5 flex-lg-row-reverse">
+      <div class="col-lg-6">
+        <h4 class="fw-bold mb-3">Parametric Mashrabiya</h4>
+        <p class="text-muted">
+          Brick-based parametric mashrabiya screen with algorithmically optimized perforations. 
+ A modern approach supported by computational design for superior shading, ventilation, and thermal performance.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <div class="shadow rounded-4 overflow-hidden">
+          <img 
+            src="../Images/Special Elements/mousharabieh etude.png" 
+            alt="Parametric Mashrabiya" 
+            class="img-fluid w-100"
+            style="aspect-ratio: 2 / 1; object-fit: cover;"
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 3: Text left, Image right -->
+    <div class="row align-items-center g-5 mb-5">
+      <div class="col-lg-6">
+        <h4 class="fw-bold mb-3">Brick Mashrabiya Screen</h4>
+        <p class="text-muted">
+          Modular brick-based shading system reinterpreting traditional patterns.
+          Excellent thermal performance and aesthetic harmony with modern architecture.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <div class="shadow rounded-4 overflow-hidden">
+          <img 
+            src="https://via.placeholder.com/600x400?text=Brick+Mashrabiya" 
+            alt="Brick Mashrabiya" 
+            class="img-fluid w-100"
+            style="aspect-ratio: 2 / 1; object-fit: cover;"
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 4: Image left, Text right -->
+    <div class="row align-items-center g-5 mb-5 flex-lg-row-reverse">
+      <div class="col-lg-6">
+        <h4 class="fw-bold mb-3">Bespoke Connection Detail</h4>
+        <p class="text-muted">
+        BRICK mechanical support system for load transfer of masonry cladding in façade. 
+        Designed for any building type, new construction or renovation.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <div class="shadow rounded-4 overflow-hidden">
+          <img 
+            src="https://via.placeholder.com/600x400?text=Bespoke+Connection" 
+            alt="Bespoke Connection Detail" 
+            class="img-fluid w-100"
+            style="aspect-ratio: 3 / 2; object-fit: cover;"
+          >
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Call to Action -->
+    <div class="text-center py-5 bg-light rounded-4">
+      <h3 class="fw-bold mb-4">Ready for Something Unique?</h3>
+      <p class="lead mb-4">Let’s design and build your custom element.</p>
+      <a href="#contact" class="btn btn-warning btn-lg">
+        Get in Touch <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<!-- Your contact section (copy from other pages) -->
+<section id="contact">
+  <!-- paste your contact form here -->
+</section>
+
+<!-- Your footer (copy from other pages) -->
+<footer>
+  <!-- paste your footer here -->
+</footer>
+
+<!-- Your scripts (copy from other pages) -->
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Your existing script blocks for carousel, counter, Forminit, etc. -->
+<!-- paste them here -->
+</body>
+</html>
