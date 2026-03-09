@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CivilArchEngineering – Construction & Engineering Excellence</title>
+  <meta name="description" content="CivilArchEngineering - Experts in civil engineering, architectural design, structural projects and construction services in Tunisia and beyond.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+  :root {
+    --primary:        #1E3A5F;
+    --primary-mid:    #2C5282;
+    --accent-glow:    #4DA8DA;
+    --accent:         #FF6600;
+    --dark-text:      #0A1F35;
+    --light-bg:       #E8EEF4;
+    --white:          #FFFFFF;
+  }
+
+#hero {
+  min-height: 85vh;
+  background: var(--dark-text) url('images/fallback-construction.png') center/cover no-repeat;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 110px;
+}
+
+#hero video,
+#hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-text);
+    background-color: #fff;
+    scroll-padding-top: 150px;
+  }
+
+  /* Header & Navbar */
+  header {
+      background: var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .navbar {
+      padding: 0.0rem 0;
+      min-height: 100px;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    .navbar-brand img {
+      height: 150px;
+      width: auto;
+      max-height: 100%;
+      object-fit: contain;
+      filter: 
+        drop-shadow(0 0 14px #ffffff)
+        drop-shadow(0 0 9px #ffffff)
+        drop-shadow(0 0 5px #ffffff)
+        drop-shadow(0 0 2px #ffffff);
+    }
+
+    .nav-link {
+      color: var(--white) !important;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent) !important;
+    }
+
+    .dropdown-menu {
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .dropdown-item:hover {
+      background-color: var(--light-bg);
+      color: var(--accent);
+    }
+
+
+  /* Hero */
+  #hero {
+    min-height: 85vh;
+    background: var(--dark-text);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 110px;
+  }
+
+  .hero-logo {
+    max-width: 550px;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
+    filter: 
+      drop-shadow(0 0 14px #ffffff)
+      drop-shadow(0 0 9px #ffffff)
+      drop-shadow(0 0 5px #ffffff)
+      drop-shadow(0 0 2px #ffffff);
+  }
+
+  #hero .lead {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    opacity: 0.95;
+  }
+
+  .btn-lg {
+    transition: all 0.3s;
+  }
+
+  .btn-lg:hover {
+    transform: scale(1.05);
+  }
+
+  /* General sections */
+  .section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: var(--accent);
+    margin: 15px auto;
+    border-radius: 3px;
+  }
+
+  #about, #projects, #services, #contact {
+    padding: 100px 0;
+  }
+
+  #projects, #contact {
+    background: var(--light-bg);
+  }
+
+  #services {
+    background: white;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
+  }
+
+  /* Cards (shared for projects & services) */
+  .project-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    transition: all 0.4s ease;
+    background: white;
+  }
+
+  .project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+  }
+
+.project-img,
+.services-img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Specific heights – adjust these values only if needed */
+.project-img {
+  height: 300px;           /* Featured Projects – balanced height */
+}
+
+.services-img {
+  height: 280px;           /* Our Services – slightly smaller or same as projects */
+}
+
+/* Hover zoom (already smooth) */
+.project-card:hover .project-img,
+.project-card:hover .services-img {
+  transform: scale(1.08);
+}
+
+  .project-card:hover .project-img,
+  .project-card:hover .services-img {
+    transform: scale(1.1);
+  }
+
+  .project-overlay {
+    background: rgba(30, 58, 95, 0.75);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  .project-card .badge {
+    font-size: 0.95rem;
+    padding: 0.6em 1.2em;
+  }
+
+  .card-body {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .card-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  /* Services-specific */
+
+
+
+
+  #services .card-body {
+    padding: 1.5rem 1.25rem 2.5rem;
+  }
+
+  #services .card {
+    min-height: 520px;
+  }
+
+  /* Buttons */
+  .btn-warning,
+  .btn-warning:hover,
+  .btn-warning:focus,
+  .btn-warning:active {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: var(--white) !important;
+  }
+
+  /* Contact & Footer */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  footer a {
+    color: var(--accent-glow);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: var(--accent);
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-logo {
+      max-width: 380px;
+    }
+    .navbar {
+      min-height: 90px;
+      padding: 0.8rem 0;
+    }
+    .navbar-brand img {
+      height: 90px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-logo {
+      max-width: 300px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header class="fixed-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../Images/Logo CAE.png" alt="CivilArchEngineering Logo" class="img-fluid">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../index.html#about">Company Profile</a></li>
+              <li><a class="dropdown-item" href="#">History</a></li>
+              <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
+            </ul>
+          </li> -->
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#projects-title">Projects</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services / Sectors
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../services/architecture_design.html">Architectural Design</a></li>
+              <li><a class="dropdown-item" href="../services/structural-engineering.html">Structural Engineering</a></li>
+              <li><a class="dropdown-item active" href="../services/General Contracting.html">General Contracting</a></li>
+              <li><a class="dropdown-item" href="../services/BIM Modeling.html">BIM Modeling</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="pt-5 mt-5">
+  <div class="container py-5">
+
+    <!-- Hero – punchy and confident -->
+    <div class="text-center mb-5 pb-5 border-bottom">
+      <h1 class="section-title mb-4">General Contracting</h1>
+      <p class="lead fw-bold text-dark mb-4" style="max-width: 900px; margin: 0 auto; font-size: 1.6rem;">
+        We don’t just manage sites — we deliver finished buildings.
+      </p>
+      <p class="lead text-muted mb-5" style="max-width: 800px; margin: 0 auto;">
+        Full execution. Zero excuses. On time. On budget. Built right.
+      </p>
+      <a href="#contact" class="btn btn-warning btn-lg px-5 py-3">
+        Build With Us <i class="fas fa-hard-hat ms-2"></i>
+      </a>
+    </div>
+
+    <!-- Stats row – builds trust fast -->
+    <div class="row g-4 text-center mb-5 pb-5">
+  <div class="col-md-4">
+    <div class="p-4 bg-light rounded-4 shadow-sm">
+      <h2 class="fw-bold text-warning mb-1">98%</h2>
+      <p class="text-muted mb-0">On-Time Delivery</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="p-4 bg-light rounded-4 shadow-sm">
+      <h2 class="fw-bold text-warning mb-1">0</h2>
+      <p class="text-muted mb-0">Major Safety Incidents</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="p-4 bg-light rounded-4 shadow-sm">
+      <h2 class="fw-bold text-warning mb-1">10+</h2>
+      <p class="text-muted mb-0">Years of Execution Experience</p>
+    </div>
+  </div>
+</div>
+
+    <!-- Before / After comparison cards -->
+    <h3 class="section-title text-center mb-5">From Vision to Victory</h3>
+    <div class="row g-5 mb-5">
+      <!-- Before -->
+
+<!-- image showcase  -->   
+ 
+<!-- ===== PROJECT: Ksar Said ===== -->
+<div class="row g-5 mb-5 align-items-center">
+  
+    <div class="col-lg-5">
+      <h4 class="fw-bold mb-3">Villa Ksar Said – Complete Interior Renovation & Finishing Works</h4>
+      <p class="text-muted"> We provide full-scope interior renovation services for residential and commercial spaces. Our team manages the entire process, from initial demolition to the final high-quality finish.  We specialize in complete bathroom and room overhauls, transforming outdated layouts into modern, functional spaces. Our tile installation (carrelage) covers floors, walls, and cladding with precision using ceramic, stone, and porcelain.  Our custom joinery (menuiserie) includes interior doors, built-in cabinets, shelving, and decorative moldings. We handle all plumbing work (plomberie), from fixture installation to full piping upgrades.  Every project is managed for a seamless blend of durability, aesthetics, and code compliance. We ensure reliable execution with attention to detail across every trade.</p>
+      <div class="d-flex gap-2 mb-3">
+        <span class="badge bg-secondary">Before: 2 photos</span>
+        <span class="badge bg-secondary">After: 2 photos</span>
+      </div>
+    </div>
+
+  <div class="col-lg-7">
+    
+    <div class="row g-3">
+      <!-- Before Carousel -->
+      <div class="col-md-6">
+        <h6 class="text-danger mb-2">Before</h6>
+        <div id="beforeCarousel_Ksar Said" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../Images/Construction/Ksar Said/old1.jpg" class="d-block w-100" style="aspect-ratio: 9/16; object-fit: cover;" alt="Before 1">
+            </div>
+            <div class="carousel-item">
+              <img src="../Images/Construction/Ksar Said/old2.jpg" class="d-block w-100" style="aspect-ratio: 9/16; object-fit: cover;" alt="Before 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#beforeCarousel_Ksar Said" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#beforeCarousel_Ksar Said" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- After Carousel -->
+      <div class="col-md-6">
+        <h6 class="text-success mb-2">After</h6>
+        <div id="afterCarousel_Ksar Said" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../Images/Construction/Ksar Said/new1.jpg" class="d-block w-100" style="aspect-ratio: 9/16; object-fit: cover;" alt="After 1">
+            </div>
+            <div class="carousel-item">
+              <img src="../Images/Construction/Ksar Said/new2.jpg" class="d-block w-100" style="aspect-ratio: 9/16; object-fit: cover;" alt="After 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#afterCarousel_Ksar Said" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#afterCarousel_Ksar Said" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ===== END PROJECT ===== -->
+<!-- ===== PROJECT: Villa Mutuelleville ===== -->
+<div class="row g-5 mb-5 align-items-center">
+  <div class="col-lg-7">
+    
+    <div class="row g-3">
+      <!-- Before Carousel -->
+      <div class="col-md-6">
+        <h6 class="text-danger mb-2">Before</h6>
+        <div id="beforeCarousel_Villa Mutuelleville" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../Images/Construction/Villa Mutuelleville/old1.jpg" class="d-block w-100" style="aspect-ratio: 9/16; object-fit: cover;" alt="Before 1">
+            </div>
+            <div class="carousel-item">
+              <img src="../Images/Construction/Villa Mutuelleville/old2.jpg" class="d-block w-100" style="aspect-ratio: 9/16; object-fit: cover;" alt="Before 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#beforeCarousel_Villa Mutuelleville" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#beforeCarousel_Villa Mutuelleville" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- After Carousel -->
+      <div class="col-md-6">
+        <h6 class="text-success mb-2">After</h6>
+        <div id="afterCarousel_Villa Mutuelleville" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../Images/Construction/Villa Mutuelleville/new1.jpg" class="d-block w-100" style="aspect-ratio: 9/16; object-fit: cover;" alt="After 1">
+            </div>
+            <div class="carousel-item">
+              <img src="../Images/Construction/Villa Mutuelleville/new2.jpg" class="d-block w-100" style="aspect-ratio: 9/16; object-fit: cover;" alt="After 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#afterCarousel_Villa Mutuelleville" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#afterCarousel_Villa Mutuelleville" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+    <div class="col-lg-5">
+      <h4 class="fw-bold mb-3">Villa Mutuelleville – Terrace Waterproofing & Tiling</h4>
+      <p class="text-muted"> Complete renovation of an existing terrace, including the removal of old waterproofing and surface preparation. We handled the demolition, stripping of the old membrane, and debris removal.  Application of a new waterproofing membrane to ensure full protection against moisture and water infiltration.  Installation of a mortar screed for proper leveling and surface preparation.  Finishing with high-quality tiles, laid with professional-grade adhesive for a durable, long-lasting result.</p>
+      <div class="d-flex gap-2 mb-3">
+        <span class="badge bg-secondary">Before: 2 photos</span>
+        <span class="badge bg-secondary">After: 2 photos</span>
+      </div>
+    </div>
+
+</div>
+<!-- ===== END PROJECT ===== -->
+<!-- ===== PROJECT: Villa Notre Dame ===== -->
+<div class="row g-5 mb-5 align-items-center">
+  
+    <div class="col-lg-5">
+      <h4 class="fw-bold mb-3">Villa Notre Dame – Marble Staircase & Surface Renovation</h4>
+      <p class="text-muted"> Complete restoration of a marble staircase, including redoing the base foundation and subfloor preparation.  Installation of new 30x30 marble flooring (dallage) to match the existing aesthetic.  Refinishing and touch-up of old wall marble, restoring it to a like-new condition with expert polishing and repairs.</p>
+      <div class="d-flex gap-2 mb-3">
+        <span class="badge bg-secondary">Before: 2 photos</span>
+        <span class="badge bg-secondary">After: 2 photos</span>
+      </div>
+    </div>
+
+  <div class="col-lg-7">
+    
+    <div class="row g-3">
+      <!-- Before Carousel -->
+      <div class="col-md-6">
+        <h6 class="text-danger mb-2">Before</h6>
+        <div id="beforeCarousel_Villa Notre Dame" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../Images/Construction/Villa Notre Dame/old1.jpg" class="d-block w-100" style="aspect-ratio: 9/16; object-fit: cover;" alt="Before 1">
+            </div>
+            <div class="carousel-item">
+              <img src="../Images/Construction/Villa Notre Dame/old2.jpg" class="d-block w-100" style="aspect-ratio: 9/16; object-fit: cover;" alt="Before 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#beforeCarousel_Villa Notre Dame" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#beforeCarousel_Villa Notre Dame" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- After Carousel -->
+      <div class="col-md-6">
+        <h6 class="text-success mb-2">After</h6>
+        <div id="afterCarousel_Villa Notre Dame" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../Images/Construction/Villa Notre Dame/new1.jpg" class="d-block w-100" style="aspect-ratio: 9/16; object-fit: cover;" alt="After 1">
+            </div>
+            <div class="carousel-item">
+              <img src="../Images/Construction/Villa Notre Dame/new2.jpg" class="d-block w-100" style="aspect-ratio: 9/16; object-fit: cover;" alt="After 2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#afterCarousel_Villa Notre Dame" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#afterCarousel_Villa Notre Dame" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ===== END PROJECT ===== -->
+<!-- image showcase  -->   
+
+    <!-- Project Lifecycle – vertical steps -->
+    <h3 class="section-title text-center mb-5">How We Build It</h3>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="timeline-vertical">
+          <div class="timeline-step d-flex mb-5">
+            <div class="timeline-icon flex-shrink-0 me-4">
+              <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 60px; height: 60px;">
+                1
+              </div>
+            </div>
+            <div>
+              <h5 class="fw-bold mb-2">Mobilization & Planning</h5>
+              <p class="text-muted mb-0">
+                Site setup, team assembly, detailed schedule, permits, procurement kick-off.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step d-flex mb-5">
+            <div class="timeline-icon flex-shrink-0 me-4">
+              <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 60px; height: 60px;">
+                2
+              </div>
+            </div>
+            <div>
+              <h5 class="fw-bold mb-2">Execution & Coordination</h5>
+              <p class="text-muted mb-0">
+                Daily site management, subcontractor control, material flow, quality checkpoints.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step d-flex mb-5">
+            <div class="timeline-icon flex-shrink-0 me-4">
+              <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 60px; height: 60px;">
+                3
+              </div>
+            </div>
+            <div>
+              <h5 class="fw-bold mb-2">Quality & Safety Lockdown</h5>
+              <p class="text-muted mb-0">
+                Inspections, testing, safety audits, snagging lists, corrective actions.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step d-flex mb-5">
+            <div class="timeline-icon flex-shrink-0 me-4">
+              <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 60px; height: 60px;">
+                4
+              </div>
+            </div>
+            <div>
+              <h5 class="fw-bold mb-2">Handover & Close-Out</h5>
+              <p class="text-muted mb-0">
+                Commissioning, client training, final documentation, as-built drawings, warranty period start.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="text-center py-5 bg-light rounded-4 mt-5">
+      <h3 class="fw-bold mb-4">Ready to Get It Built?</h3>
+      <p class="lead mb-4">We deliver what we promise — every time.</p>
+      <a href="#contact" class="btn btn-warning btn-lg px-5">
+        Let’s Talk Construction <i class="fas fa-hard-hat ms-2"></i>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<style>
+  .timeline-vertical .timeline-step {
+    position: relative;
+  }
+  .timeline-vertical .timeline-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    bottom: -40px;
+    width: 2px;
+    background: var(--accent);
+  }
+</style>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <h3>Get in Touch</h3>
+        <p class="mt-4"><i class="fas fa-map-marker-alt me-3" style="color: var(--accent);"></i> 4 Avenue de La Liberté, Tunis , Tunisie </p>
+        <p><i class="fas fa-phone me-3" style="color: var(--accent);"></i> +216 22 488 665</p>
+        <!-- <p><i class="fas fa-envelope me-3" style="color: var(--accent);"></i> contact@civilarcheng.tn</p> -->
+        <p><i class="fas fa-clock me-3" style="color: var(--accent);"></i> Monday–Friday: 8:00 – 17:30 / Saturday : 8:00 - 12:00</p>
+      </div>
+     <div class="col-lg-7">
+  <form id="contact-form" action="https://forminit.com/f/lhoe0oklte6" method="POST">
+    <div class="mb-3">
+      <input 
+        type="text" 
+        name="fi-sender-fullName" 
+        class="form-control" 
+        placeholder="Full Name" 
+        required
+      >
+    </div>
+    <div class="mb-3">
+      <input 
+        type="email" 
+        name="fi-sender-email" 
+        class="form-control" 
+        placeholder="Email Address" 
+        required
+      >
+    </div>
+    <div class="mb-3">
+      <input 
+        type="tel" 
+        name="fi-sender-phone" 
+        class="form-control" 
+        placeholder="Phone Number" 
+        pattern="[+\s0-9]*" 
+        title="Only digits, spaces and optional + allowed"
+      >
+      <small class="form-text text-muted mt-1">
+        
+      </small>
+    </div>
+    <div class="mb-4">
+      <textarea 
+        name="fi-text-message" 
+        class="form-control" 
+        rows="5" 
+        placeholder="Your Message / Project Description" 
+        required
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-warning btn-lg">
+  Send Message
+</button>
+  </form>
+
+  <p id="form-result" class="mt-3 fw-bold"></p>
+</div>
+    </div>
+  </div>
+
+  <!-- New: Special elements -->
+      <div class="item">
+       
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="container py-4">
+    <p class="mb-2 fs-4 fw-bold">CivilArchEngineering</p>
+    <div class="d-flex justify-content-center gap-4 mb-3">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="mb-0">© 2025 CivilArchEngineering. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function(){
+    $("#servicesCarousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 2 },
+        1000: { items: 3 }
+      }
+    });
+  });
+</script>
+<!-- Counter animation script -->
+<!-- Counter animation script – restarts every time section is scrolled into view -->
+<script>
+  const counters = document.querySelectorAll('.counter');
+
+  // Function to animate a single counter
+  function animateCounter(counter) {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const increment = target / 100; // adjust for speed/smoothness
+
+    const updateCount = () => {
+      if (count < target) {
+        count += increment;
+        counter.innerText = Math.ceil(count) + '+';
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = target + '+';
+      }
+    };
+
+    updateCount();
+  }
+
+  // Observer options
+  const options = {
+    threshold: 0.5 // trigger when 50% of section is visible
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Animate all counters when section enters view
+        counters.forEach(counter => {
+          counter.innerText = '0+'; // reset to 0
+          animateCounter(counter);
+        });
+      }
+    });
+  }, options);
+
+  // Start observing the about section
+  observer.observe(document.querySelector('#about'));
+</script>
+
+<!-- Forminit SDK -->
+<script src="https://forminit.com/sdk/v1/forminit.js"></script>
+<script>
+  const forminit = new Forminit();
+  const FORM_ID = 'lhoe0oklte6';
+
+  const form = document.getElementById('contact-form');
+  const result = document.getElementById('form-result');
+
+  // Real-time cleaning: remove anything that's not digit, + or space
+  form.querySelector('input[name="fi-sender-phone"]').addEventListener('input', function(e) {
+    this.value = this.value.replace(/[^0-9+\s]/g, '');
+  });
+
+  form.addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    result.textContent = 'Sending...';
+    result.className = 'mt-3 fw-bold text-muted';
+
+    const formData = new FormData(form);
+
+    try {
+      const { data, error } = await forminit.submit(FORM_ID, formData);
+
+      if (error) {
+        result.textContent = error.message || 'Error sending message. Please try again.';
+        result.className = 'mt-3 fw-bold text-danger';
+        return;
+      }
+
+      result.textContent = 'Message sent successfully! Thank you.';
+      result.className = 'mt-3 fw-bold text-success';
+      form.reset();
+
+    } catch (err) {
+      result.textContent = 'Network error. Please check connection and try again.';
+      result.className = 'mt-3 fw-bold text-danger';
+    }
+  });
+</script>
+<script>
+// Extra client-side phone validation (blocks letters & unwanted chars)
+document.querySelector('input[name="fi-sender-phone"]').addEventListener('input', function(e) {
+  this.value = this.value.replace(/[^0-9+\s]/g, ''); // remove anything that's not digit, +, or space
+});
+</script>
+</body>
+</html>
