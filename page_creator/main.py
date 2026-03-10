@@ -53,54 +53,40 @@ def generate_project_html(project_folder, text_position, orientation):
 
     # Generate carousel HTML (same for both left and right layouts)
     carousel_html = f"""
-    <div class="row g-3">
-      <!-- Before Carousel -->
-      <div class="col-md-6">
-        <h6 class="text-danger mb-2">Before</h6>
-        <div id="beforeCarousel_{folder_name}" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="{image_path}/old1.jpg" class="d-block w-100" style="{aspect_style} object-fit: cover;" alt="Before 1">
-            </div>
-            <div class="carousel-item">
-              <img src="{image_path}/old2.jpg" class="d-block w-100" style="{aspect_style} object-fit: cover;" alt="Before 2">
+        <div class="row g-3">
+          <!-- Before Carousel -->
+          <div class="col-6 col-md-6">
+            <h6 class="text-danger mb-2">Before</h6>
+            <div id="beforeCarousel_{folder_name}" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="{image_path}/old1.jpg" class="d-block w-100" style="{aspect_style} object-fit: cover;" alt="Before 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="{image_path}/old2.jpg" class="d-block w-100" style="{aspect_style} object-fit: cover;" alt="Before 2">
+                </div>
+              </div>
+              <!-- Controls removed -->
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#beforeCarousel_{folder_name}" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#beforeCarousel_{folder_name}" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
 
-      <!-- After Carousel -->
-      <div class="col-md-6">
-        <h6 class="text-success mb-2">After</h6>
-        <div id="afterCarousel_{folder_name}" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="{image_path}/new1.jpg" class="d-block w-100" style="{aspect_style} object-fit: cover;" alt="After 1">
-            </div>
-            <div class="carousel-item">
-              <img src="{image_path}/new2.jpg" class="d-block w-100" style="{aspect_style} object-fit: cover;" alt="After 2">
+          <!-- After Carousel -->
+          <div class="col-6 col-md-6">
+            <h6 class="text-success mb-2">After</h6>
+            <div id="afterCarousel_{folder_name}" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="{image_path}/new1.jpg" class="d-block w-100" style="{aspect_style} object-fit: cover;" alt="After 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="{image_path}/new2.jpg" class="d-block w-100" style="{aspect_style} object-fit: cover;" alt="After 2">
+                </div>
+              </div>
+              <!-- Controls removed -->
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#afterCarousel_{folder_name}" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#afterCarousel_{folder_name}" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
-      </div>
-    </div>
-"""
+    """
 
     # Generate text content HTML (same for both layouts)
     text_html = f"""
