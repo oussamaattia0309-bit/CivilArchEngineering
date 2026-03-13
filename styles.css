@@ -277,3 +277,603 @@ footer a:hover {
     max-width: 300px;
   }
 }
+
+  :root {
+    --primary:        #1E3A5F;
+    --primary-mid:    #2C5282;
+    --accent-glow:    #4DA8DA;
+    --accent:         #FF6600;
+    --dark-text:      #0A1F35;
+    --light-bg:       #E8EEF4;
+    --white:          #FFFFFF;
+  }
+
+#hero {
+  min-height: 85vh;
+  background: var(--dark-text) url('images/fallback-construction.png') center/cover no-repeat;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 110px;
+}
+
+#hero video,
+#hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-text);
+    background-color: #fff;
+    scroll-padding-top: 150px;
+  }
+
+  /* Header & Navbar */
+  header {
+      background: var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .navbar {
+      padding: 0.0rem 0;
+      min-height: 100px;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    .navbar-brand img {
+      height: 150px;
+      width: auto;
+      max-height: 100%;
+      object-fit: contain;
+      filter: 
+        drop-shadow(0 0 14px #ffffff)
+        drop-shadow(0 0 9px #ffffff)
+        drop-shadow(0 0 5px #ffffff)
+        drop-shadow(0 0 2px #ffffff);
+    }
+
+    .nav-link {
+      color: var(--white) !important;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent) !important;
+    }
+
+    .dropdown-menu {
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .dropdown-item:hover {
+      background-color: var(--light-bg);
+      color: var(--accent);
+    }
+
+
+  /* Hero */
+  #hero {
+    min-height: 85vh;
+    background: var(--dark-text);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 110px;
+  }
+
+  .hero-logo {
+    max-width: 550px;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
+    filter: 
+      drop-shadow(0 0 14px #ffffff)
+      drop-shadow(0 0 9px #ffffff)
+      drop-shadow(0 0 5px #ffffff)
+      drop-shadow(0 0 2px #ffffff);
+  }
+
+  #hero .lead {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    opacity: 0.95;
+  }
+
+  .btn-lg {
+    transition: all 0.3s;
+  }
+
+  .btn-lg:hover {
+    transform: scale(1.05);
+  }
+
+  /* General sections */
+  .section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: var(--accent);
+    margin: 15px auto;
+    border-radius: 3px;
+  }
+
+  #about, #projects, #services, #contact {
+    padding: 100px 0;
+  }
+
+  #projects, #contact {
+    background: var(--light-bg);
+  }
+
+  #services {
+    background: white;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
+  }
+
+  /* Cards (shared for projects & services) */
+  .project-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    transition: all 0.4s ease;
+    background: white;
+  }
+
+  .project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+  }
+
+.project-img,
+.services-img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Specific heights – adjust these values only if needed */
+.project-img {
+  height: 300px;           /* Featured Projects – balanced height */
+}
+
+.services-img {
+  height: 280px;           /* Our Services – slightly smaller or same as projects */
+}
+
+/* Hover zoom (already smooth) */
+.project-card:hover .project-img,
+.project-card:hover .services-img {
+  transform: scale(1.08);
+}
+
+  .project-card:hover .project-img,
+  .project-card:hover .services-img {
+    transform: scale(1.1);
+  }
+
+  .project-overlay {
+    background: rgba(30, 58, 95, 0.75);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  .project-card .badge {
+    font-size: 0.95rem;
+    padding: 0.6em 1.2em;
+  }
+
+  .card-body {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .card-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  /* Services-specific */
+
+
+
+
+  #services .card-body {
+    padding: 1.5rem 1.25rem 2.5rem;
+  }
+
+  #services .card {
+    min-height: 520px;
+  }
+
+  /* Buttons */
+  .btn-warning,
+  .btn-warning:hover,
+  .btn-warning:focus,
+  .btn-warning:active {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: var(--white) !important;
+  }
+
+  /* Contact & Footer */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  footer a {
+    color: var(--accent-glow);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: var(--accent);
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-logo {
+      max-width: 380px;
+    }
+    .navbar {
+      min-height: 90px;
+      padding: 0.8rem 0;
+    }
+    .navbar-brand img {
+      height: 90px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-logo {
+      max-width: 300px;
+    }
+  }
+
+  :root {
+    --primary:        #1E3A5F;
+    --primary-mid:    #2C5282;
+    --accent-glow:    #4DA8DA;
+    --accent:         #FF6600;
+    --dark-text:      #0A1F35;
+    --light-bg:       #E8EEF4;
+    --white:          #FFFFFF;
+  }
+
+#hero {
+  min-height: 85vh;
+  background: var(--dark-text) url('images/fallback-construction.png') center/cover no-repeat;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 110px;
+}
+
+#hero video,
+#hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-text);
+    background-color: #fff;
+    scroll-padding-top: 150px;
+  }
+
+  /* Header & Navbar */
+  header {
+      background: var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .navbar {
+      padding: 0.0rem 0;
+      min-height: 100px;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    .navbar-brand img {
+      height: 150px;
+      width: auto;
+      max-height: 100%;
+      object-fit: contain;
+      filter: 
+        drop-shadow(0 0 14px #ffffff)
+        drop-shadow(0 0 9px #ffffff)
+        drop-shadow(0 0 5px #ffffff)
+        drop-shadow(0 0 2px #ffffff);
+    }
+
+    .nav-link {
+      color: var(--white) !important;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent) !important;
+    }
+
+    .dropdown-menu {
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .dropdown-item:hover {
+      background-color: var(--light-bg);
+      color: var(--accent);
+    }
+
+
+  /* Hero */
+  #hero {
+    min-height: 85vh;
+    background: var(--dark-text);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 110px;
+  }
+
+  .hero-logo {
+    max-width: 550px;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
+    filter: 
+      drop-shadow(0 0 14px #ffffff)
+      drop-shadow(0 0 9px #ffffff)
+      drop-shadow(0 0 5px #ffffff)
+      drop-shadow(0 0 2px #ffffff);
+  }
+
+  #hero .lead {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    opacity: 0.95;
+  }
+
+  .btn-lg {
+    transition: all 0.3s;
+  }
+
+  .btn-lg:hover {
+    transform: scale(1.05);
+  }
+
+  /* General sections */
+  .section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: var(--accent);
+    margin: 15px auto;
+    border-radius: 3px;
+  }
+
+  #about, #projects, #services, #contact {
+    padding: 100px 0;
+  }
+
+  #projects, #contact {
+    background: var(--light-bg);
+  }
+
+  #services {
+    background: white;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
+  }
+
+  /* Cards (shared for projects & services) */
+  .project-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    transition: all 0.4s ease;
+    background: white;
+  }
+
+  .project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+  }
+
+.project-img,
+.services-img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Specific heights – adjust these values only if needed */
+.project-img {
+  height: 300px;           /* Featured Projects – balanced height */
+}
+
+.services-img {
+  height: 280px;           /* Our Services – slightly smaller or same as projects */
+}
+
+/* Hover zoom (already smooth) */
+.project-card:hover .project-img,
+.project-card:hover .services-img {
+  transform: scale(1.08);
+}
+
+  .project-card:hover .project-img,
+  .project-card:hover .services-img {
+    transform: scale(1.1);
+  }
+
+  .project-overlay {
+    background: rgba(30, 58, 95, 0.75);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  .project-card .badge {
+    font-size: 0.95rem;
+    padding: 0.6em 1.2em;
+  }
+
+  .card-body {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .card-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  /* Services-specific */
+
+
+
+
+  #services .card-body {
+    padding: 1.5rem 1.25rem 2.5rem;
+  }
+
+  #services .card {
+    min-height: 520px;
+  }
+
+  /* Buttons */
+  .btn-warning,
+  .btn-warning:hover,
+  .btn-warning:focus,
+  .btn-warning:active {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: var(--white) !important;
+  }
+
+  /* Contact & Footer */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  footer a {
+    color: var(--accent-glow);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: var(--accent);
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-logo {
+      max-width: 380px;
+    }
+    .navbar {
+      min-height: 90px;
+      padding: 0.8rem 0;
+    }
+    .navbar-brand img {
+      height: 90px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-logo {
+      max-width: 300px;
+    }
+  }
