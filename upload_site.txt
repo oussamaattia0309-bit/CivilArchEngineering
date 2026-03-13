@@ -1,0 +1,14 @@
+# 1. Va dans ton dossier de projet
+cd C:\Users\USER\Desktop\stuff\web\CivilArchEngineering-main
+
+# 2. Vérifie ce qui a été modifié
+git status
+
+# 3. Ajoute tous les fichiers modifiés
+git add .
+
+# 4. Crée un commit avec un message
+git commit -m "CSS nettoyé et optimisé"
+
+# 5. Envoie sur GitHub
+git push

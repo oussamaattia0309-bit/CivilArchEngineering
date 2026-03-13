@@ -130,7 +130,12 @@
     <div class="row g-4">
     <!-- Villa Mahdia -->
 <div class="col-md-6 col-lg-4">
-  <div class="card project-card h-100 shadow overflow-hidden rounded-4 animate__animated animate__fadeInUp" id="villa-mahdia">
+  <div class="card project-card h-100 shadow overflow-hidden rounded-4 animate__animated animate__fadeInUp" 
+       id="villa-mahdia"
+       data-bs-toggle="modal"
+       data-bs-target="#imageModal"
+       onclick="document.getElementById('modalImage').src='Images/Villa Mahdia.png'"
+       style="cursor: pointer;">
     <div class="position-relative">
       <img
         src="Images/Villa Mahdia.png"
@@ -153,7 +158,12 @@
 
 <!-- Villa Djerba – now identical structure to Villa Mahdia -->
 <div class="col-md-6 col-lg-4">
-  <div class="card project-card h-100 shadow overflow-hidden rounded-4 animate__animated animate__fadeInUp animate__delay-1s" id="villa-djerba">
+  <div class="card project-card h-100 shadow overflow-hidden rounded-4 animate__animated animate__fadeInUp animate__delay-1s" 
+       id="villa-djerba"
+       data-bs-toggle="modal"
+       data-bs-target="#imageModal"
+       onclick="document.getElementById('modalImage').src='Images/Villa Djerba.png'"
+       style="cursor: pointer;">
     <div class="position-relative">
       <img
         src="Images/Villa Djerba.png"
@@ -173,37 +183,62 @@
     </div>
   </div>
 </div>
-      <!-- Immeuble R+2 Bardo -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card project-card h-100 shadow overflow-hidden rounded-4 animate__animated animate__fadeInUp animate__delay-2s" id="immeuble-bardo">
-          <div class="position-relative">
-            <img
-              src="Images/Immeble Bardo.jpg"
-              class="card-img-top project-img"
-              alt="Immeuble R+2 Bardo"
-            >
-            <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
-              <!-- <a href="#" class="btn btn-warning btn-md stretched-link">View Details</a> -->
-            </div>
-          </div>
-          <div class="card-body text-center p-4">
-            <h5 class="card-title fw-bold mb-3">Immeuble R+2 Bardo</h5>
-            <span class="badge bg-warning text-dark mb-3">2024</span>
-            <p class="card-text fs-5 lh-lg">
-              Immeuble résidentiel avec commerces
-            </p>
-          </div>
-        </div>
+
+<!-- Immeuble R+2 Bardo -->
+<div class="col-md-6 col-lg-4">
+  <div class="card project-card h-100 shadow overflow-hidden rounded-4 animate__animated animate__fadeInUp animate__delay-2s" 
+       id="immeuble-bardo"
+       data-bs-toggle="modal"
+       data-bs-target="#imageModal"
+       onclick="document.getElementById('modalImage').src='Images/Immeble Bardo.jpg'"
+       style="cursor: pointer;">
+    <div class="position-relative">
+      <img
+        src="Images/Immeble Bardo.jpg"
+        class="card-img-top project-img"
+        alt="Immeuble R+2 Bardo"
+      >
+      <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
+        <!-- <a href="#" class="btn btn-warning btn-md stretched-link">View Details</a> -->
       </div>
     </div>
+    <div class="card-body text-center p-4">
+      <h5 class="card-title fw-bold mb-3">Immeuble R+2 Bardo</h5>
+      <span class="badge bg-warning text-dark mb-3">2024</span>
+      <p class="card-text fs-5 lh-lg">
+        Immeuble résidentiel avec commerces
+      </p>
+    </div>
   </div>
-</section>
+</div>
 
 <section id="services" class="py-5 py-lg-7 bg-white mb-5 mb-lg-7">
   <div class="container">
     <h2 class="section-title mb-5 mb-lg-6">Our Services</h2>
 
     <div class="row g-4 justify-content-center">
+      <!-- General Contracting -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card h-100 shadow overflow-hidden rounded-4">
+          <div class="position-relative">
+            <img
+              src="Images/Conseils.png"
+              class="card-img-top services-img semi-transparent"
+              alt="General Contracting"
+            >
+            <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
+              <a href="services/General Contracting.html" class="btn btn-warning btn-md stretched-link">Learn More</a>
+            </div>
+          </div>
+          <div class="card-body text-center p-4 p-lg-5">
+            <h5 class="card-title fw-bold mb-3">General Contracting</h5>
+            <span class="badge bg-warning text-dark mb-3">Full Execution</span>
+            <p class="card-text fs-5 lh-lg">
+              Complete site management • Subcontractor coordination • Material procurement • Quality control & delivery
+            </p>
+          </div>
+        </div>
+      </div>
       <!-- Architectural Design -->
       <div class="col-md-6 col-lg-4">
         <div class="card project-card h-100 shadow overflow-hidden rounded-4">
@@ -273,28 +308,7 @@
         </div>
       </div>
 
-      <!-- General Contracting -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card project-card h-100 shadow overflow-hidden rounded-4">
-          <div class="position-relative">
-            <img
-              src="Images/Conseils.png"
-              class="card-img-top services-img semi-transparent"
-              alt="General Contracting"
-            >
-            <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
-              <a href="services/General Contracting.html" class="btn btn-warning btn-md stretched-link">Learn More</a>
-            </div>
-          </div>
-          <div class="card-body text-center p-4 p-lg-5">
-            <h5 class="card-title fw-bold mb-3">General Contracting</h5>
-            <span class="badge bg-warning text-dark mb-3">Full Execution</span>
-            <p class="card-text fs-5 lh-lg">
-              Complete site management • Subcontractor coordination • Material procurement • Quality control & delivery
-            </p>
-          </div>
-        </div>
-      </div>
+      
 
       <!-- Special Elements -->
       <div class="col-md-6 col-lg-4">
@@ -501,6 +515,17 @@
     }
   });
 </script>
+<!-- Lightbox Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-transparent">
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: fixed; top: 20px; right: 20px; z-index: 1060; background-color: rgba(0,0,0,0.5); padding: 10px;"></button>
+      <div class="modal-body d-flex align-items-center justify-content-center p-0">
+        <img src="" id="modalImage" class="img-fluid" style="max-width: 100%; max-height: 100vh; object-fit: contain;" alt="">
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
