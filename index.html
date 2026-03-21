@@ -19,15 +19,42 @@
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://example.com/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="CivilArchEngineering – Construction & Engineering Excellence">
+  <meta property="og:description" content="CivilArchEngineering - Experts in civil engineering, architectural design, structural projects and construction services in Tunisia and beyond.">
+  <meta property="og:image" content="Images/Logo CAE.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Organization structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CivilArchEngineering",
+    "url": "https://example.com/",
+    "logo": "https://example.com/Images/Logo%20CAE.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+21622488665",
+      "contactType": "Customer Service",
+      "areaServed": "TN"
+    }]
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-to-content visually-hidden-focusable" href="#hero">Skip to content</a>
 
 <header class="fixed-top">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand" href="../index.html">
-        <img src="Images/Logo CAE.png" alt="CivilArchEngineering Logo" class="img-fluid">
+        <img src="Images/Logo CAE.png" alt="CivilArchEngineering Logo" class="img-fluid" decoding="async">
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,6 +109,9 @@
       src="Images/Logo CAE.png"
       alt="CivilArchEngineering Logo"
       class="hero-logo img-fluid mb-3 mb-lg-4"
+      srcset="Images/Logo CAE.png 1x"
+      sizes="(max-width: 600px) 300px, 550px"
+      decoding="async"
     >
 
     <p class="lead mt-1 mt-lg-2">
@@ -89,7 +119,7 @@
       <small>Since 2016 – Building the Future</small>
     </p>
 
-    <a href="#contact" class="btn btn-warning btn-lg mt-4 mt-lg-5">
+    <a href="#contact" class="btn btn-warning btn-lg hero-cta">
       Get in Touch <i class="fas fa-arrow-right ms-2"></i>
     </a>
   </div>
@@ -141,6 +171,8 @@
         src="Images/Villa Mahdia.png"
         class="card-img-top project-img"
         alt="Villa Mahdia"
+        loading="lazy"
+        decoding="async"
       >
       <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
         <!-- <a href="#" class="btn btn-warning btn-md stretched-link">View Details</a> -->
@@ -169,6 +201,8 @@
         src="Images/Villa Djerba.png"
         class="card-img-top project-img"
         alt="Villa Djerba"
+        loading="lazy"
+        decoding="async"
       >
       <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
         <!-- <a href="#" class="btn btn-warning btn-md stretched-link">View Details</a> -->
@@ -197,6 +231,8 @@
         src="Images/Immeble Bardo.jpg"
         class="card-img-top project-img"
         alt="Immeuble R+2 Bardo"
+        loading="lazy"
+        decoding="async"
       >
       <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
         <!-- <a href="#" class="btn btn-warning btn-md stretched-link">View Details</a> -->
@@ -219,12 +255,14 @@
     <div class="row g-4 justify-content-center">
       <!-- General Contracting -->
       <div class="col-md-6 col-lg-4">
-        <div class="card project-card h-100 shadow overflow-hidden rounded-4">
+        <div class="card project-card service-card h-100 shadow overflow-hidden rounded-4">
           <div class="position-relative">
             <img
               src="Images/Conseils.png"
-              class="card-img-top services-img semi-transparent"
+              class="card-img-top services-img"
               alt="General Contracting"
+              loading="lazy"
+              decoding="async"
             >
             <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
               <a href="services/General Contracting.html" class="btn btn-warning btn-md stretched-link">Learn More</a>
@@ -241,12 +279,14 @@
       </div>
       <!-- Architectural Design -->
       <div class="col-md-6 col-lg-4">
-        <div class="card project-card h-100 shadow overflow-hidden rounded-4">
+        <div class="card project-card service-card h-100 shadow overflow-hidden rounded-4">
           <div class="position-relative">
             <img
               src="Images/Villa Djerba archi.png"
-              class="card-img-top services-img semi-transparent"
+              class="card-img-top services-img"
               alt="Architectural Design"
+              loading="lazy"
+              decoding="async"
             >
             <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
               <a href="services/architecture_design.html" class="btn btn-warning btn-md stretched-link">Learn More</a>
@@ -264,12 +304,14 @@
 
       <!-- Structural Engineering -->
       <div class="col-md-6 col-lg-4">
-        <div class="card project-card h-100 shadow overflow-hidden rounded-4">
+        <div class="card project-card service-card h-100 shadow overflow-hidden rounded-4">
           <div class="position-relative">
             <img
               src="Images/structure.png"
-              class="card-img-top services-img semi-transparent"
+              class="card-img-top services-img"
               alt="Structural Engineering"
+              loading="lazy"
+              decoding="async"
             >
             <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
               <a href="services/structural-engineering.html" class="btn btn-warning btn-md stretched-link">Learn More</a>
@@ -287,12 +329,14 @@
 
       <!-- BIM Services -->
       <div class="col-md-6 col-lg-4">
-        <div class="card project-card h-100 shadow overflow-hidden rounded-4">
+        <div class="card project-card service-card h-100 shadow overflow-hidden rounded-4">
           <div class="position-relative">
             <img
               src="Images/BIm services.png"
-              class="card-img-top services-img semi-transparent"
+              class="card-img-top services-img"
               alt="BIM Services"
+              loading="lazy"
+              decoding="async"
             >
             <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
               <a href="services/BIM Modeling.html" class="btn btn-warning btn-md stretched-link">Learn More</a>
@@ -312,12 +356,14 @@
 
       <!-- Special Elements -->
       <div class="col-md-6 col-lg-4">
-        <div class="card project-card h-100 shadow overflow-hidden rounded-4">
+        <div class="card project-card service-card h-100 shadow overflow-hidden rounded-4">
           <div class="position-relative">
             <img
               src="Images/Speciaux.png"
-              class="card-img-top services-img semi-transparent"
+              class="card-img-top services-img"
               alt="Special elements"
+              loading="lazy"
+              decoding="async"
             >
             <div class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 transition">
               <a href="services/Special Elements.html" class="btn btn-warning btn-md stretched-link">Learn More</a>

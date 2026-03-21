@@ -40,7 +40,7 @@ header {
 }
 
 .navbar-brand img {
-  height: 150px;
+  height: 110px;
   width: auto;
   max-height: 100%;
   object-fit: contain;
@@ -186,6 +186,39 @@ header {
   box-shadow: 0 25px 50px rgba(0,0,0,0.2);
 }
 
+/* Service card refinements */
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card .card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card .services-img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.service-card .project-overlay {
+  background: linear-gradient(180deg, rgba(30,58,95,0.12), rgba(30,58,95,0.35));
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.service-card:hover .project-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card .btn.md, .service-card .btn-md {
+  z-index: 2;
+}
+
 .project-img,
 .services-img {
   object-fit: cover;
@@ -198,17 +231,13 @@ header {
 
 .services-img {
   height: 280px;
-  opacity: 0.6;
-  transition: opacity 0.4s ease, transform 0.5s ease;
+  opacity: 1;
+  transition: transform 0.5s ease;
 }
 
 .project-card:hover .project-img,
 .project-card:hover .services-img {
   transform: scale(1.08);
-}
-
-.project-card:hover .services-img {
-  opacity: 1;
 }
 
 .project-overlay {
@@ -299,12 +328,48 @@ footer a:hover {
   }
   
   .navbar-brand img {
-    height: 90px;
+    height: 80px;
   }
+}
+
+/* Skip to content accessible focus */
+.skip-to-content {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.visually-hidden-focusable:focus,
+.skip-to-content:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  background: var(--white);
+  color: var(--dark-text);
+  padding: 8px 12px;
+  z-index: 2000;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 @media (max-width: 576px) {
   .hero-logo {
     max-width: 300px;
+  }
+}
+
+/* Tweak hero CTA spacing so it sits a bit closer to the small tagline */
+.hero-cta {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  .hero-cta {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
   }
 }

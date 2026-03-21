@@ -316,6 +316,19 @@
       max-width: 300px;
     }
   }
+  /* Timeline vertical connector */
+  .timeline-vertical .timeline-step {
+    position: relative;
+  }
+  .timeline-vertical .timeline-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    bottom: -40px;
+    width: 2px;
+    background: var(--accent);
+  }
 </style>
 </head>
 
@@ -349,22 +362,7 @@
             </ul>
           </li> -->
 
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html#projects-title">Projects</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Services / Sectors
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../services/architecture_design.html">Architectural Design</a></li>
-              <li><a class="dropdown-item" href="../services/structural-engineering.html">Structural Engineering</a></li>
-              <li><a class="dropdown-item active" href="../services/General Contracting.html">General Contracting</a></li>
-              <li><a class="dropdown-item" href="../services/BIM Modeling.html">BIM Modeling</a></li>
-            </ul>
-          </li>
-
+ 
           <li class="nav-item">
             <a class="nav-link" href="../index.html#contact">Contact</a>
           </li>
@@ -425,10 +423,7 @@
     <div class="col-lg-5">
       <h4 class="fw-bold mb-3">Villa Ksar Said – Complete Interior Renovation & Finishing Works</h4>
       <p class="text-muted"> We provide full-scope interior renovation services for residential and commercial spaces. Our team manages the entire process, from initial demolition to the final high-quality finish.  We specialize in complete bathroom and room overhauls, transforming outdated layouts into modern, functional spaces. Our tile installation (carrelage) covers floors, walls, and cladding with precision using ceramic, stone, and porcelain.  Our custom joinery (menuiserie) includes interior doors, built-in cabinets, shelving, and decorative moldings. We handle all plumbing work (plomberie), from fixture installation to full piping upgrades.  Every project is managed for a seamless blend of durability, aesthetics, and code compliance. We ensure reliable execution with attention to detail across every trade.</p>
-      <div class="d-flex gap-2 mb-3">
-        <span class="badge bg-secondary">Before: 2 photos</span>
-        <span class="badge bg-secondary">After: 2 photos</span>
-      </div>
+      
     </div>
 
   <div class="col-lg-7">
@@ -516,9 +511,7 @@
       <h4 class="fw-bold mb-3">Villa Mutuelleville – Terrace Waterproofing & Tiling</h4>
       <p class="text-muted"> Complete renovation of an existing terrace, including the removal of old waterproofing and surface preparation. We handled the demolition, stripping of the old membrane, and debris removal.  Application of a new waterproofing membrane to ensure full protection against moisture and water infiltration.  Installation of a mortar screed for proper leveling and surface preparation.  Finishing with high-quality tiles, laid with professional-grade adhesive for a durable, long-lasting result.</p>
       <div class="d-flex gap-2 mb-3">
-        <span class="badge bg-secondary">Before: 2 photos</span>
-        <span class="badge bg-secondary">After: 2 photos</span>
-      </div>
+      
     </div>
 
 </div>
@@ -533,10 +526,7 @@
     <div class="col-lg-5">
       <h4 class="fw-bold mb-3">Villa Notre Dame – Marble Staircase & Surface Renovation</h4>
       <p class="text-muted"> Complete restoration of a marble staircase, including redoing the base foundation and subfloor preparation.  Installation of new 30x30 marble flooring (dallage) to match the existing aesthetic.  Refinishing and touch-up of old wall marble, restoring it to a like-new condition with expert polishing and repairs.</p>
-      <div class="d-flex gap-2 mb-3">
-        <span class="badge bg-secondary">Before: 2 photos</span>
-        <span class="badge bg-secondary">After: 2 photos</span>
-      </div>
+      
     </div>
 
   <div class="col-lg-7">
@@ -660,22 +650,6 @@
 
   </div>
 </main>
-
-
-  .timeline-vertical .timeline-step {
-    position: relative;
-  }
-  .timeline-vertical .timeline-step:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 30px;
-    top: 60px;
-    bottom: -40px;
-    width: 2px;
-    background: var(--accent);
-  }
-</style> -->
-
 <section id="contact">
   <div class="container">
     <h2 class="section-title">Contact Us</h2>

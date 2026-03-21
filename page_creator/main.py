@@ -93,10 +93,6 @@ def generate_project_html(project_folder, text_position, orientation):
     <div class="col-lg-5">
       <h4 class="fw-bold mb-3">{title}</h4>
       <p class="text-muted">{description}</p>
-      <div class="d-flex gap-2 mb-3">
-        <span class="badge bg-secondary">Before: 2 photos</span>
-        <span class="badge bg-secondary">After: 2 photos</span>
-      </div>
     </div>
 """
 
