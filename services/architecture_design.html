@@ -214,16 +214,14 @@
       <img 
         loading="lazy" 
         decoding="async" 
-        src="../Images/architecture_design6.png" 
-        alt="Projet Architectural 6" 
+        src="" style="display: none;" 
+        alt="" style="display: none;" 
         class="img-fluid w-100"
         style="height: 400px; object-fit: cover;"
       >
-      <div class="p-4">
-        <h5 class="fw-bold mb-2">Maison Éco-Responsable</h5>
-        <p class="text-muted small mb-0">Matériaux durables et optimisation énergétique</p>
+      <div class="p-4" style="display: none;">
       </div>
-    </div>
+  </div>
   </div>
 </div>
   </div>
@@ -352,50 +350,6 @@
       }
     });
   });
-</script>
-<!-- Counter animation script -->
-<!-- Counter animation script – restarts every time section is scrolled into view -->
-<script>
-  const counters = document.querySelectorAll('.counter');
-
-  // Function to animate a single counter
-  function animateCounter(counter) {
-    const target = +counter.getAttribute('data-target');
-    let count = 0;
-    const increment = target / 100; // adjust for speed/smoothness
-
-    const updateCount = () => {
-      if (count < target) {
-        count += increment;
-        counter.innerText = Math.ceil(count) + '+';
-        requestAnimationFrame(updateCount);
-      } else {
-        counter.innerText = target + '+';
-      }
-    };
-
-    updateCount();
-  }
-
-  // Observer options
-  const options = {
-    threshold: 0.5 // trigger when 50% of section is visible
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Animate all counters when section enters view
-        counters.forEach(counter => {
-          counter.innerText = '0+'; // reset to 0
-          animateCounter(counter);
-        });
-      }
-    });
-  }, options);
-
-  // Start observing the about section
-  observer.observe(document.querySelector('#about'));
 </script>
 
 <!-- Forminit SDK -->
