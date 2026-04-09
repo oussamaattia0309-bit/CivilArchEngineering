@@ -25,10 +25,39 @@
       min-height: 100vh;
       width: 100%;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 0;
     }
     .z-index-2 {
       position: relative;
       z-index: 2;
+      padding: 20px;
+    }
+    .hero-text {
+      background-color: rgba(255, 255, 255, 0.7);
+      color: var(--primary);
+      padding: 15px 25px;
+      border-radius: 8px;
+      display: inline-block;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+    }
+    @media (max-width: 768px) {
+      .hero-logo {
+        max-width: 200px;
+        margin-bottom: 15px;
+      }
+      .hero-section {
+        padding: 15px 0;
+      }
+      .hero-text {
+        padding: 10px 15px;
+        font-size: 16px;
+        background-color: rgba(255, 255, 255, 0.85);
+      }
     }
   </style>
   <link rel="icon" href="Images/MP Logo.png" type="image/png">
@@ -122,10 +151,7 @@
 
     <div class="position-relative z-index-2">
       <img src="Images/MP Logo.png" alt="Mega Pascal Engineering Logo" class="hero-logo img-fluid mb-3 mb-lg-4" decoding="async">
-      <p class="lead mt-1 mt-lg-2">
-        A Legacy of Precision Engineering & Construction Excellence<br>
-        <small>Since 2016 – Building the Future</small>
-      </p>
+      
 
       <a href="#contact" class="btn btn-warning btn-lg hero-cta">
       Get in Touch <i class="fas fa-arrow-right ms-2"></i>
