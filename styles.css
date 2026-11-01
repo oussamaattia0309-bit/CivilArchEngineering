@@ -379,3 +379,97 @@ footer a:hover {
     margin-bottom: 1.5rem;
   }
 }
+/* ----------------------------------------------
+   9. LANGUAGE SWITCHER (EN / FR / AR)
+   ---------------------------------------------- */
+.lang-switcher {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  z-index: 1040;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 5px 8px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.lang-btn {
+  border: 0;
+  background: transparent;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.lang-btn:hover { opacity: 0.85; transform: scale(1.1); }
+.lang-btn.active { opacity: 1; transform: scale(1.15); box-shadow: 0 0 0 2px #c2127a; }
+.lang-btn img { display: block; border-radius: 2px; }
+/* Hide Google Translate chrome */
+.goog-te-banner-frame, .goog-te-balloon-frame { display: none !important; }
+.goog-logo-link, .goog-te-gadget { display: none !important; }
+#google_translate_element { display: none !important; }
+body { top: 0 !important; }
+
+/* ----------------------------------------------
+   8. FLASHY NAV ITEM (MEGAPASCAL Design)
+   ---------------------------------------------- */
+.nav-flashy {
+  position: relative;
+  font-weight: 800 !important;
+  background: linear-gradient(90deg, #ff8fc4, #e5258f, #c2127a, #ff8fc4);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  animation: mpd-shimmer 2.5s linear infinite, mpd-pulse 1.6s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(229, 37, 143, 0.5);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+.nav-flashy:hover,
+.nav-flashy:focus {
+  color: transparent !important;
+}
+.nav-flashy i {
+  color: #ffd700;
+  animation: mpd-spin 3s linear infinite;
+  filter: drop-shadow(0 0 4px #ffd700);
+  margin-right: 4px;
+}
+.flashy-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 7px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  background: linear-gradient(135deg, #ff8fc4, #c2127a);
+  border-radius: 999px;
+  vertical-align: middle;
+  animation: mpd-badge 1.4s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(194, 18, 122, 0.6);
+}
+@keyframes mpd-shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+@keyframes mpd-pulse {
+  0%, 100% { filter: drop-shadow(0 0 3px rgba(229, 37, 143, 0.6)); }
+  50% { filter: drop-shadow(0 0 12px rgba(194, 18, 122, 0.9)); }
+}
+@keyframes mpd-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes mpd-badge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+}
+

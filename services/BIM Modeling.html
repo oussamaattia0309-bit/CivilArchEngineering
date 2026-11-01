@@ -25,6 +25,12 @@
 <body>
 
 <header class="fixed-top">
+<div id="google_translate_element"></div>
+<div class="lang-switcher">
+  <button class="lang-btn active" data-lang="en" onclick="setLang('en')" title="English"><img src="https://flagcdn.com/w20/gb.png" alt="English" width="20" height="15"></button>
+  <button class="lang-btn" data-lang="fr" onclick="setLang('fr')" title="Français"><img src="https://flagcdn.com/w20/fr.png" alt="Français" width="20" height="15"></button>
+  <button class="lang-btn" data-lang="ar" onclick="setLang('ar')" title="العربية"><img src="https://flagcdn.com/w20/tn.png" alt="العربية" width="20" height="15"></button>
+</div>
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand" href="../index.html">
@@ -68,6 +74,9 @@
             </ul>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link nav-flashy" href="../services/megapascal-design.html"><i class="fas fa-star"></i>MEGAPASCAL Design <span class="flashy-badge">NEW</span></a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="../index.html#contact">Contact</a>
           </li>
@@ -400,5 +409,37 @@ document.querySelector('input[name="fi-sender-phone"]').addEventListener('input'
 });
 </script>
 
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,fr,ar', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.lang === lang); });
+  try { localStorage.setItem('preferredLang', lang); } catch (e) {}
+  var select = document.querySelector('.goog-te-combo');
+  if (select) {
+    select.value = lang;
+    select.dispatchEvent(new Event('change'));
+  } else {
+    document.cookie = 'googtrans=/en/' + lang + '; path=/';
+    location.reload();
+  }
+}
+(function () {
+  var stored = null;
+  try { stored = localStorage.getItem('preferredLang'); } catch (e) {}
+  if (stored && stored !== 'en') {
+    var tries = 0;
+    var iv = setInterval(function () {
+      var select = document.querySelector('.goog-te-combo');
+      if (select) { clearInterval(iv); select.value = stored; select.dispatchEvent(new Event('change')); document.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.lang === stored); }); }
+      if (++tries > 60) clearInterval(iv);
+    }, 100);
+  }
+})();
+</script>
 </body>
 </html>
